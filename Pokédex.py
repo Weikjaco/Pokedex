@@ -19,59 +19,20 @@
 import string
 import urllib.request
 
-# Simplifies pokemon_pics function 
-def write(file, url):
-    file.write(url + '\n')
-
-# Writes file full of pokemon pic URL's.
-def wpokemon_pics():
-    file = open('poke_selfie.txt', 'w')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2010/07/001-bulbasaur-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/002-ivysaur-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/003-venusaur-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2016/01/charmander-pokemon-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/005-charmeleon-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2016/01/charizard-pokemon-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/007-squirtle-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/008-wartortel-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/009-blastoise-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/010-caterpie-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/011-metapod-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/012-butterfree-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/013-weedle-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/014-kakuna-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/015-beedrill-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/016-pidgey-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/017-pidgeotto-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/018-pidgeot-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/019-rattata-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/020-raticate-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/021-spearow-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/022-fearow-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/023-ekans-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/024-arbok-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2016/07/pokemon-go-pikachu-flying-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/026-raichu-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/027-sandshrew-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/028-sandslash-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_full/public/cif/2015/07/029-nidoran-f-coloring-page.png')
-    write(file, 'http://www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/030-nidorina-coloring-page.png')
-    file.close()
-
 # Reads the file "poke_selfie.txt" written, and sends it into a "pic_list".
-def rpokemon_pics():
-    pic_list = []
-    file = open('poke_selfie.txt', 'r')
-    for line in file:
-        value = line.split('\n')
-        pic_list.append(value)
-    file.close()
-    return pic_list
+# def rpokemon_pics():
+#     pic_list = []
+#     file = open('poke_selfie.txt', 'r')
+#     for line in file:
+#         value = line.split('\n')
+#         pic_list.append(value)
+#     file.close()
+#     return pic_list
 
 # Saves a specific "name".jpg file into your python directory.    
-def download_web_image(url, name):
-    full_name = str(name) + '.jpg'
-    urllib.request.urlretrieve(url, full_name)
+# def download_web_image(url, name):
+#     full_name = str(name) + '.jpg'
+#     urllib.request.urlretrieve(url, full_name)
 
 # Prints the menu options available to user.
 def printMenu():
@@ -97,19 +58,14 @@ def printPokedex(pokedex):
             types = pokedex[idx][2]
         print('Number: ' + str(idx) + ', Name: ' + str(pokemon) + ', HP: ' + str(hp) + ', Type: ' + str(types))
         print('-----------')
-    print('End Pokedex')
-    print()
-    print()
+    print('End Pokedex\n\n')
 #-----------------------------------------------------------------------------------------------------------------------
 # HONORS LAB ENHANCEMENT TO THIS OPTION
-# Can look up pokemon by name, retrieve the details of pokemon, (HONORS - creates a .jpg image of the pokemon
-# chosen that is put into the python directory, where it can be accessed. This file will be named whatever pokemon you
-# are looking at .jpg. EXAMPLE : pikachu.jpg)
+# Can look up pokemon by name, retrieve the details of pokemon
 
 def lookupByName(pokedex, name):
-    wpokemon_pics() # Creates a file full of URL's for pokemon selfies 
     new_dic = {}
-    pic_list = rpokemon_pics() # Return the "pic_list" made in the read file to the value of "pic_list"
+#     pic_list = rpokemon_pics() # Return the "pic_list" made in the read file to the value of "pic_list"
     pokes = list(pokedex.values()) 
     list_of_poke = []
     pokeFlag = False
@@ -121,9 +77,9 @@ def lookupByName(pokedex, name):
     for idx in pokedex: # Finds pokemon the user desires, and returns statistics and a selfie of pokemon
         pokemon = pokedex[idx][0]
         if pokemon == name:
-            for akey in new_dic.keys(): # Makes a picture (.jpg file) for the pokemon chosen.
-                if akey == pokemon:
-                    download_web_image(new_dic[akey], name)
+#             for akey in new_dic.keys(): # Makes a picture (.jpg file) for the pokemon chosen.
+#                 if akey == pokemon:
+#                     download_web_image(new_dic[akey], name)
             pokemon = pokedex[idx][0]
             hp = pokedex[idx][1]
             if len(pokedex[idx]) > 3:
